@@ -1720,6 +1720,13 @@
 		font-weight: 100;
 		line-height: 1.75em;
 	}
+	
+	input {
+		color:black;
+		display:block;
+		margin:auto;
+		width:50%;
+	}
 
 	a {
 		-moz-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
@@ -2327,7 +2334,8 @@
 		outline: 0;
 		padding: 0 1em;
 		text-decoration: none;
-		width: 100%;
+		width: 50%;
+		margin:auto;
 	}
 
 		input[type="text"]:invalid,
