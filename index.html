@@ -150,12 +150,17 @@
 						<p>I'm a man of few words, but here are some words about me</p>
 					</header>
 					<p>
-						<span id="red" class="red-text"><a
-							href="https://youtu.be/veHQMaxiOmg?t=52s" target="_blank">Badger</a></span>
-						<span>Engineer</span> <span class="red-text">Skier</span> <span>Creative</span><br>
-						<span class="red-text">Traveler</span> <span>Curious</span> <span
-							class="red-text">Amateur Photographer</span> <span>Musician</span>
-						<span class="red-text">Ambitious</span>
+						<span id="red" class="red-text abouttext" data-content="pic1"><a href="https://youtu.be/veHQMaxiOmg?t=52s" target="_blank">Badger</a></span>
+						<span class="abouttext" data-content="pic7">Engineer</span> 
+						<span id="red" class="red-text abouttext" data-content="pic2">Skier</span> 
+						<span class="abouttext" data-content="pic8">Creative</span><br>
+						<span id="red" class="red-text abouttext" data-content="pic3">Traveler</span> 
+						<span class="abouttext" data-content="pic9">Curious</span> 
+						<span id="red" class="red-text abouttext" data-content="pic4">Amateur Photographer</span> 
+						<span class="abouttext" data-content="pic10">Musician</span>
+						<span id="red" class="red-text abouttext" data-content="pic5">Ambitious</span> 
+						<span class="abouttext" data-content="pic11">Chef</span> 
+						<span id="red" class="red-text abouttext" data-content="pic6">Coach</span>
 					</p>
 				</div>
 			</div>
@@ -165,48 +170,35 @@
 				<div class="grid">
 					<div class="grid-sizer"></div>
 					<div class="grid-item">
-						<img
-							src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg" />
+						<img id="pic1" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg" />
 					</div>
 					<div class="grid-item">
-						<img
-							src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg" />
+						<img id = "pic2" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg" />
 					</div>
 					<div class="grid-item">
-						<img
-							src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg" />
+						<img id="pic3" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg" />
 					</div>
 					<div class="grid-item">
-						<img
-							src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg" />
+						<img id="pic4" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg" />
 					</div>
 					<div class="grid-item">
-						<img
-							src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg" />
+						<img id="pic5" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg" />
 					</div>
 					<div class="grid-item">
-						<img
-							src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/cat-nose.jpg" />
+						<img id="pic6" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/cat-nose.jpg" />
 					</div>
 					<div class="grid-item">
-						<img
-							src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/contrail.jpg" />
+						<img id="pic7" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/contrail.jpg" />
 					</div>
 					<div class="grid-item">
-						<img
-							src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/golden-hour.jpg" />
+						<img id="pic8" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/golden-hour.jpg" />
 					</div>
 					<div class="grid-item">
-						<img
-							src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/flight-formation.jpg" />
+						<img id="pic9" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/flight-formation.jpg" />
 					</div>
 				</div>
 			</div>
 		</section>
-
-
-
-
 
 		<!-- Five -->
 		<section id="contact" class="wrapper style2 special fade"
@@ -273,6 +265,18 @@
 
 		$grid.imagesLoaded().progress(function() {
 			$grid.masonry('layout');
+		});
+		
+		$(".abouttext").mouseover(function(e) {
+			if($("#"+$(this).data('content')).css("transform") == 'none') {
+				$("#"+$(this).data('content')).css("transform",'rotateY(360deg)');
+			}
+			else {
+				$("#"+$(this).data('content')).css("transform",'none');
+			}
+			
+		
+			
 		});
 	</script>
 
