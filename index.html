@@ -203,19 +203,19 @@
 		<!-- Five -->
 		<section id="contact" class="wrapper style2 special fade"
 			style="width: 100%;">
-			<div class="container">
+			<div id="thanks" class="container">
 				<header>
 					<h2>Let's talk</h2>
 					<p>I'm always open to new ideas and opportunities</p>
 				</header>
-				<form action="https://formspree.io/ericwallat@gmail.com" method="POST">
+				<form action="https://formspree.io/ericwallat@gmail.com" method="POST" target="_blank">
 					<p>
-						<input name="_replyto" type="email" /> <b>Your</b> Email Address
+						<input name="_replyto" type="email" required/> <b>Your</b> Email Address
 					</p>
 					<p>
-						<input name="name" type="text" /> Name
+						<input name="name" type="text" required/> Name
 					</p>
-					<textarea placeholder="Please enter your message here..." name="message" rows="5" cols="30"></textarea>
+					<textarea placeholder="Please enter your message here..." name="message" rows="5" cols="30" required></textarea>
 					<p>
 						<input type="submit" name="submit" value="Submit" />
 					</p>
@@ -231,8 +231,6 @@
 						class="label">LinkedIn</span></a></li>
 				<li><a href="https://github.com/ericwallat" target="_blank"
 					class="icon alt fa-github"><span class="label">GitHub</span></a></li>
-				<li><a href="mailto:ericwallat@gmail.com"
-					class="icon alt fa-envelope"><span class="label">Email</span></a></li>
 			</ul>
 			<ul class="copyright">
 				<li>Created by me</li>
@@ -275,9 +273,12 @@
 			else {
 				$("#"+$(this).data('content')).css("transform",'none');
 			}
-			
+				
+		});
 		
-			
+		$("form").submit(function() {
+			$("form").hide();
+			$("#thanks").append("<p>Thanks! I'll be in contact with you soon.</p>")
 		});
 	</script>
 
