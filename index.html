@@ -41,7 +41,8 @@
 			<a href="#skills" class="goto-next scrolly">Next</a>
 		</section>
 
-		<section id="skills" class="wrapper style1 special fade-up" style="margin:auto;">
+		<section id="skills" class="wrapper style1 special fade-up"
+			style="margin: auto;">
 			<div class="container">
 				<header class="major">
 					<h2>My Skills</h2>
@@ -141,8 +142,9 @@
 
 
 		<section id="about">
-			<div class="spotlight left style1" style="box-shadow: rgba(0, 0, 0, 0.10) 0px 0.55em 1.5px -3.5px;">
-				<div class="content" style="overflow-y:hidden;">
+			<div class="spotlight left style1"
+				style="box-shadow: rgba(0, 0, 0, 0.10) 0px 0.55em 1.5px -3.5px;">
+				<div class="content" style="overflow-y: hidden;width:100%;">
 					<header>
 						<h2>About Me</h2>
 						<p>I'm a man of few words, but here are some words about me</p>
@@ -159,7 +161,46 @@
 			</div>
 
 			<div class="aboutthird"
-				style="background-position: center 12px; background-image: url(assets/css/images/overlay.png); background-attachment: fixed; box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25); height: 100vh; overflow: hidden; position: relative;">
+				style="background-position: center 12px; background-color:#191a22; background-attachment: fixed; box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25); height: 100vh; overflow: hidden; position: relative;">
+				<div class="grid">
+					<div class="grid-sizer"></div>
+					<div class="grid-item">
+						<img
+							src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg" />
+					</div>
+					<div class="grid-item">
+						<img
+							src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg" />
+					</div>
+					<div class="grid-item">
+						<img
+							src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg" />
+					</div>
+					<div class="grid-item">
+						<img
+							src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg" />
+					</div>
+					<div class="grid-item">
+						<img
+							src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg" />
+					</div>
+					<div class="grid-item">
+						<img
+							src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/cat-nose.jpg" />
+					</div>
+					<div class="grid-item">
+						<img
+							src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/contrail.jpg" />
+					</div>
+					<div class="grid-item">
+						<img
+							src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/golden-hour.jpg" />
+					</div>
+					<div class="grid-item">
+						<img
+							src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/flight-formation.jpg" />
+					</div>
+				</div>
 			</div>
 		</section>
 
@@ -216,7 +257,24 @@
 	<script src="assets/js/util.js"></script>
 	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 	<script src="assets/js/main.js"></script>
+	<script src="assets/js/masonry.pkgd.min.js"></script>
+	<script src="assets/js/imagesloaded.pkgd.min.js"></script>
 
+	<script type="text/javascript">
+		var $grid = $('.grid').masonry({
+			// set itemSelector so .grid-sizer is not used in layout
+			itemSelector : '.grid-item',
+			// use element for option
+			columnWidth : '.grid-sizer',
+			percentPosition : true,
+			gutter: 10,
+			originLeft: false
+		});
+
+		$grid.imagesLoaded().progress(function() {
+			$grid.masonry('layout');
+		});
+	</script>
 
 </body>
 </html>
