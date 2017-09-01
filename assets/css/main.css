@@ -100,7 +100,7 @@
 
 @media only screen and (min-width: 1280px) {
     .wrapper {
-        width: 1260px;
+        width: auto;
     }
 }
 
@@ -147,8 +147,14 @@
 	width:100%;
 	height:auto;
 	margin:auto;
+	overflow-y:hidden;
 }
-	
+
+.aboutthird {
+	margin-left: 31%;
+	height:100%;
+	overflow:hidden;
+}	
 
 /* Box Model */
 
@@ -2964,6 +2970,10 @@
 
 		.spotlight:nth-last-of-type(2) {
 			z-index: 2;
+			width:31%;
+			float:left;
+			overflow:visible;
+			
 		}
 
 		.spotlight:nth-last-of-type(3) {
@@ -3638,6 +3648,12 @@
 			body, input, select, textarea {
 				font-size: 12pt;
 			}
+			
+		/* AboutThird */
+		
+			.aboutthird {
+				display:none;
+			}
 
 		/* Spotlight */
 
@@ -3670,6 +3686,10 @@
 				.spotlight .goto-next {
 					display: none;
 				}
+			
+			.spotlight:nth-last-of-type(2) {
+				width:100%;
+			}
 
 		/* Wrapper */
 
