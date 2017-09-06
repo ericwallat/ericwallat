@@ -1753,6 +1753,7 @@
 
 	p {
 		margin: 0 0 2em 0;
+		font-size: 93%;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -1784,7 +1785,7 @@
 	}
 
 	h5 {
-		font-size: 0.9em;
+		font-size: 91%;
 		line-height: 1.5em;
 	}
 
@@ -3163,7 +3164,7 @@
 
 		.spotlight.left .content, .spotlight.right .content {
 			height: 101%;
-			padding: 6em 3em;
+			padding: 2em 3em;
 			top: 0;
 			width: 28em;
 		}
@@ -3657,7 +3658,7 @@
 			}
 
 			.spotlight.left .content, .spotlight.right .content {
-				padding: 4.5em 2.5em;
+				padding: 1.5em 2.5em;
 				width: 25em;
 			}
 
