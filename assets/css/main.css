@@ -5083,6 +5083,10 @@ body.is-touch #banner {
 	body, input, select, textarea {
 		font-size: 12pt;
 	}
+	
+	.fa {
+		font-size: 6vw !important;
+	}
 
 	/* List */
 	ul.actions {
@@ -5187,6 +5191,9 @@ body.is-touch #banner {
   #timeline::before {
     left: 50%;
     margin-left: -2px;
+  }
+  .fa {
+  	font-size: 2vw;
   }
 }
 
