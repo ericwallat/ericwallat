@@ -4,6 +4,7 @@
 <title>Eric Wallat | Full Stack Developer</title>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="rgb()">
 <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 <link rel="stylesheet" href="assets/css/main.css" />
 <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
@@ -201,7 +202,7 @@
 
 			<div class="aboutthird"
 				style="background-position: center 12px; background-color:#191a22; background-attachment: fixed; box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25); height: 100vh; overflow: hidden; position: relative;">
-				<div class="grid">
+				<div class="grid" id="mason">
 					<div class="grid-sizer"></div>
 					<div class="grid-item">
 						<img id="pic1" src="images/badger.jpg" />
@@ -278,8 +279,10 @@
 	<script src="assets/js/main.js"></script>
 	<script src="assets/js/masonry.pkgd.min.js"></script>
 	<script src="assets/js/imagesloaded.pkgd.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/8.1.0/lazyload.min.js"></script>
 
 	<script type="text/javascript">
+	
 		var $grid = $('.grid').masonry({
 			// set itemSelector so .grid-sizer is not used in layout
 			itemSelector : '.grid-item',
@@ -308,6 +311,8 @@
 			$("form").hide();
 			$("#thanks").append("<p>Thanks! I'll be in contact with you soon.</p>")
 		});
+		
+
 		
 	</script>
 

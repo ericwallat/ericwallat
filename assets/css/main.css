@@ -178,8 +178,7 @@ body {
 }
 
 /* WebKit and Opera browsers */
-@
--webkit-keyframes spinner {from { -webkit-transform:rotateY(0deg);
+@-webkit-keyframes spinner {from { -webkit-transform:rotateY(0deg);
 	
 }
 
@@ -188,8 +187,7 @@ to {
 }
 
 } /* all other browsers */
-@
-keyframes spinner {from { -moz-transform:rotateY(0deg);
+@keyframes spinner {from { -moz-transform:rotateY(0deg);
 	-ms-transform: rotateY(0deg);
 	transform: rotateY(0deg);
 }
@@ -1566,8 +1564,7 @@ pre code {
 }
 
 /* Loader */
-@
--moz-keyframes spinner-show { 0% {
+@-moz-keyframes spinner-show { 0% {
 	opacity: 0;
 }
 
@@ -1583,8 +1580,7 @@ opacity
 1;
 }
 }
-@
--webkit-keyframes spinner-show { 0% {
+@-webkit-keyframes spinner-show { 0% {
 	opacity: 0;
 }
 
@@ -1600,8 +1596,7 @@ opacity
 1;
 }
 }
-@
--ms-keyframes spinner-show { 0% {
+@-ms-keyframes spinner-show { 0% {
 	opacity: 0;
 }
 
@@ -1617,8 +1612,7 @@ opacity
 1;
 }
 }
-@
-keyframes spinner-show { 0% {
+@keyframes spinner-show { 0% {
 	opacity: 0;
 }
 
@@ -1634,8 +1628,7 @@ opacity
 1;
 }
 }
-@
--moz-keyframes spinner-hide { 0% {
+@-moz-keyframes spinner-hide { 0% {
 	color: rgba(255, 255, 255, 0.15);
 	z-index: 100001;
 	-moz-transform: scale(1) rotate(0deg);
