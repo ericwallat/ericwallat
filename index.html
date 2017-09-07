@@ -112,8 +112,7 @@
 				<div class="timeline-content">
 					<h2>University of Wisconsin-Madison</h2>
 					<h3>College of Engineering</h3>
-					<p>Graduated with degrees in Nuclear Engineering and Physics. Chair member for 
-					Wishmakers on Campus student organization and general member in the American Nuclear Society
+					<p>Graduated with degrees in Nuclear Engineering and Physics. Member of the American Nuclear Society
 					and the American Association of Physicists in Medicine. Also participated in Concert Band all four years.</p>
 					<span class="date">Sep 2013 - May 2017</span>
 				</div>
@@ -138,7 +137,7 @@
 				<div class="timeline-content">
 					<h2>Intern</h2>
 					<h3><a href="http://healthmyne.com" target="_blank">HealthMyne Inc.</a></h3>
-					<p>Developed Python JSON processing scsripts to anonymize large sets of patient sensitive data,
+					<p>Developed Python JSON processing scripts to anonymize large sets of patient sensitive data,
 					used MySQL and MongoDB to manage DICOM, CDA, and HL7 data,
 					 and made improvements to both client-side and server-side code</p>
 					<span class="date">May 2015 - May 2017</span>
@@ -167,11 +166,11 @@
 				<div class="timeline-content">
 					<h2>Full-Stack Software Developer</h2>
 					<h3><a href="http://etcconnect.com">Electronic Theatre Controls</a></h3>
-					<p>Analyzed hundreds of thousands of
-					MRI images using Matlab to determine correlations between breathing
-					and internal tumor motion. Created algorithms to quantify target
-					motion and treatment efficiency.</p>
-					<span class="date">June 2016 - August 2016</span>
+					<p>Implementing an e-commerce
+					solution using SAP hybris. Creating an interactive web page for
+					site visitors to change lights in our shipping area. Launched
+					BigCommerce shop for EU customers.</p>
+					<span class="date">June 2017 - Present</span>
 				</div>
 			</div>
 		</section>
@@ -310,28 +309,6 @@
 			$("#thanks").append("<p>Thanks! I'll be in contact with you soon.</p>")
 		});
 		
-		var timelineBlocks = $('.timeline-block'),
-		offset = 0.8;
-	
-		hideBlocks(timelineBlocks, offset);
-
-		$(window).on('scroll', function(){
-			(!window.requestAnimationFrame) 
-				? setTimeout(function(){ showBlocks(timelineBlocks, offset); }, 100)
-				: window.requestAnimationFrame(function(){ showBlocks(timelineBlocks, offset); });
-		});
-
-		function hideBlocks(blocks, offset) {
-			blocks.each(function(){
-				( $(this).offset().top > $(window).scrollTop()+$(window).height()*offset ) && $(this).find('.timeline-img, .timeline-content').addClass('is-hidden');
-			});
-		}
-
-		function showBlocks(blocks, offset) {
-			blocks.each(function(){
-				( $(this).offset().top <= $(window).scrollTop()+$(window).height()*offset && $(this).find('.timeline-img').hasClass('is-hidden') ) && $(this).find('.timeline-img, .timeline-content').removeClass('is-hidden').addClass('bounce-in');
-			});
-		}
 	</script>
 
 </body>
