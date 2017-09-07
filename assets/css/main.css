@@ -2906,7 +2906,7 @@ body.landing #header {
 }
 
 #banner .content .image img {
-	border-radius: 100%;
+	margin-left: 3px;
 	display: block;
 	width: 100%;
 }
